@@ -1,0 +1,16 @@
+exports.id = "main";
+exports.modules = {
+
+/***/ "./platforms/server/index.js":
+/*!***********************************!*\
+  !*** ./platforms/server/index.js ***!
+  \***********************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var koa__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! koa */ \"../node_modules/_koa@2.11.0@koa/lib/application.js\");\n/* harmony import */ var koa__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(koa__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _middleWares__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./middleWares */ \"./platforms/server/middleWares/index.js\");\n/* harmony import */ var _middleWares_routers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./middleWares/routers */ \"./platforms/server/middleWares/routers.js\");\n\n\n\nconst app = new koa__WEBPACK_IMPORTED_MODULE_0___default.a();\napp.on('error', (err, ctx) => {\n  ctx.response.status = err.statusCode || err.status || 500;\n  ctx.response.body = {\n    message: err.message\n  };\n});\napp.use(Object(_middleWares__WEBPACK_IMPORTED_MODULE_1__[\"CorseAction\"])());\napp.use(Object(_middleWares__WEBPACK_IMPORTED_MODULE_1__[\"ErrorAction\"])());\napp.use(Object(_middleWares__WEBPACK_IMPORTED_MODULE_1__[\"HeaderAction\"])());\napp.use(async ctx => {\n  ctx.status = 404;\n  await ctx.render('404');\n});\nconsole.log(_middleWares_routers__WEBPACK_IMPORTED_MODULE_2__[\"default\"]); // Routers.forEach(route=>app.use(route.routes()))\n\napp.use(Object(_middleWares__WEBPACK_IMPORTED_MODULE_1__[\"LogsAction\"])());\napp.listen(8080, () => {\n  console.log('This server is running at http://localhost:' + 8080);\n});//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9wbGF0Zm9ybXMvc2VydmVyL2luZGV4LmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vLy4vcGxhdGZvcm1zL3NlcnZlci9pbmRleC5qcz9mYmRkIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBLb2EgZnJvbSAna29hJztcbmltcG9ydCB7IENvcnNlQWN0aW9uLCBFcnJvckFjdGlvbiwgSGVhZGVyQWN0aW9uLCBMb2dzQWN0aW9ufSAgZnJvbSAnLi9taWRkbGVXYXJlcyc7XG5pbXBvcnQgUm91dGVycyAgZnJvbSAnLi9taWRkbGVXYXJlcy9yb3V0ZXJzJztcblxuY29uc3QgYXBwID0gbmV3IEtvYSgpXG5cbmFwcC5vbignZXJyb3InLCAoZXJyLCBjdHgpID0+IHtcbiAgICBjdHgucmVzcG9uc2Uuc3RhdHVzID0gZXJyLnN0YXR1c0NvZGUgfHwgZXJyLnN0YXR1cyB8fCA1MDA7XG4gICAgY3R4LnJlc3BvbnNlLmJvZHkgPSB7XG4gICAgICAgIG1lc3NhZ2U6IGVyci5tZXNzYWdlXG4gICAgfTtcbn0pO1xuYXBwLnVzZShDb3JzZUFjdGlvbigpKTtcbmFwcC51c2UoRXJyb3JBY3Rpb24oKSk7XG5hcHAudXNlKEhlYWRlckFjdGlvbigpKTtcbmFwcC51c2UoYXN5bmMoY3R4KSA9PiB7XG4gICAgY3R4LnN0YXR1cyA9IDQwNFxuICAgIGF3YWl0IGN0eC5yZW5kZXIoJzQwNCcpXG59KVxuY29uc29sZS5sb2coUm91dGVycylcbi8vIFJvdXRlcnMuZm9yRWFjaChyb3V0ZT0+YXBwLnVzZShyb3V0ZS5yb3V0ZXMoKSkpXG5hcHAudXNlKExvZ3NBY3Rpb24oKSk7XG5hcHAubGlzdGVuKDgwODAsICgpID0+IHtcbiAgICBjb25zb2xlLmxvZygnVGhpcyBzZXJ2ZXIgaXMgcnVubmluZyBhdCBodHRwOi8vbG9jYWxob3N0OicgKyA4MDgwKVxufSlcbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQ0E7QUFDQTtBQUVBO0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFEQTtBQUdBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./platforms/server/index.js\n");
+
+/***/ })
+
+};

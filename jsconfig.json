@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@root":    ["src"],
+        "@core":    ["src/core"],
+        "@utils":   ["src/utils"],
+        "@server":  ["src/platforms/server"],
+      },
+      "target": "ES6",
+      "module": "es6",
+      "allowSyntheticDefaultImports": true
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+}
